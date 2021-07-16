@@ -28,6 +28,11 @@ main {
   z-index: 1;
 }
 
+#name {
+  color: black;
+  
+}
+
 #art {
   height: 44%;
   width: 83%;
