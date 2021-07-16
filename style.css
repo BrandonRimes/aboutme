@@ -21,33 +21,25 @@ main {
   width: 24rem;
   background-image: url("https://i.pinimg.com/originals/46/bf/4e/46bf4e33dcc634417b20037b57ee51e1.jpg");background-position: center;
   background-size: cover;
-
 }
 
 .card {
   position: absolute;
+  z-index: 1;
 }
 
-/* #frame {
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform: translateX(50%) translateY(50%);
-} */
-
 #art {
-  height: 43.5%;
+  height: 44%;
   width: 83%;
   left: 8.5%;
-  top: 12%;
+  top: 11.5%;
 }
 
 #mana {
   height: 5%;
   width: 40%;
   top: 5%;
-  right: 7%;
-  border: 1px solid black;
+  right: 8%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -55,28 +47,71 @@ main {
 
 .mana {
   position: relative;
-  height: 100%;
-  width: auto;
+  height: 3.25vh;
+  width: 3.25vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .mana::before {
   content: '';
   position: absolute;
-  background-color: white;
   height: 3.5vh;
   width: 3.5vh;
   border-radius: 50%;
+  z-index: -2;
+  box-shadow: -1px 2px 0 black;
 }
 
-.manasymbol {
+.mana:hover {
+  transform: scale(1.25);
+}
+
+.manasymbols {
+  position: absolute;
+  height: inherit;
+  padding: 15% 0 0 10%;
+}
+
+#whitemana {
+
+}
+
+#whitemana::before {
+  background-color: hsl(56deg 100% 91%);
+}
+
+#bluemana {
+
+}
+
+#bluemana::before {
+  background-color: hsl(196deg 69% 80%);
+}
+
+#blackmana {
+
 }
 
 #blackmana::before {
   background-color: hsl(30deg 9% 75%);
 }
 
-#coffee {
-  height: 100%;
+#redmana {
+
+}
+
+#redmana::before {
+  background-color: hsl(16deg 75% 74%);
+}
+
+#greenmana {
+
+}
+
+#greenmana::before {
+  background-color: hsl(138deg 35% 69%);
 }
 
 #bio {
