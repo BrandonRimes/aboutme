@@ -162,7 +162,7 @@ main {
 /* ------- bio ------- */
 
 #bio {
-  width: 100%;
+  width: 90%;
   margin: 2rem;
   box-shadow: 0px 0px 10px currentColor;
   border-radius: 15px;
@@ -170,9 +170,16 @@ main {
 }
 
 #bio p {
-  padding: 0.5rem;
+  padding: 1rem;
   transition: transform, box-shadow 0.25s ease-in-out;
   border-radius: 15px;
+}
+
+#peace {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 8%;
+  opacity: 0;
 }
 
 #bio p:hover {
@@ -183,6 +190,11 @@ main {
 
 #bio:hover {
   box-shadow: unset;
+  transition: all 0.25s ease-in-out;
+}
+
+#hello:hover #peace {
+  opacity: 1;
   transition: all 0.25s ease-in-out;
 }
 
