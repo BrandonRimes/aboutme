@@ -10,7 +10,7 @@ body {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -19,8 +19,9 @@ main {
 
 #card {
   position: relative;
-  height: 33rem;
-  width: 24rem;
+  top: 1rem;
+  height: 21rem;
+  width: 15rem;
   background-image: url("https://i.pinimg.com/originals/46/bf/4e/46bf4e33dcc634417b20037b57ee51e1.jpg");background-position: center;
   background-size: cover;
   border-radius: 16px;
@@ -29,28 +30,23 @@ main {
 .card {
   position: absolute;
   z-index: 1;
+  /* border: 1px solid deeppink; */
 }
 
 #name {
+  width: 45%;
+  height: 5%;
   color: black;
-  font-size: 1.5em;
   font-weight: bold;
   letter-spacing: -1px;
-  top: 5.5%;
-  left: 9%;
-}
-
-#art {
-  height: 44%;
-  width: 83%;
-  left: 8.5%;
-  top: 11.5%;
+  top: 6%;
+  left: 8%;
 }
 
 #mana {
   height: 5%;
   width: 40%;
-  top: 5%;
+  top: 5.5%;
   right: 8%;
   display: flex;
   flex-direction: row;
@@ -59,18 +55,15 @@ main {
 
 .mana {
   position: relative;
-  height: 3.25vh;
-  width: 3.25vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
 }
 
 .mana::before {
   content: '';
   position: absolute;
-  height: 3.5vh;
-  width: 3.5vh;
+  height: 1rem;
+  width: 1rem;
   border-radius: 50%;
   z-index: -2;
   box-shadow: -1px 2px 0 black;
@@ -82,67 +75,57 @@ main {
 
 .manasymbols {
   position: absolute;
-  height: inherit;
-  padding: 15% 0 0 10%;
-}
-
-#whitemana {
-
+  height: 0.9rem;
+  padding: 5% 0% 0% 3%;
 }
 
 #whitemana::before {
   background-color: hsl(56deg 100% 91%);
 }
 
-#bluemana {
-
-}
-
 #bluemana::before {
   background-color: hsl(196deg 69% 80%);
-}
-
-#blackmana {
-
 }
 
 #blackmana::before {
   background-color: hsl(30deg 9% 75%);
 }
 
-#redmana {
-
-}
-
 #redmana::before {
   background-color: hsl(16deg 75% 74%);
-}
-
-#greenmana {
-
 }
 
 #greenmana::before {
   background-color: hsl(138deg 35% 69%);
 }
 
+#art {
+  height: 44%;
+  width: 83.5%;
+  left: 50%;
+  top: 11.5%;
+  transform: translateX(-50%);
+}
+
 #type {
   color: black;
-  font-size: 1.25em;
+  height: 4%;
+  font-size: 75%;
   font-weight: bold;
   top: 57%;
   left: 9%;
 }
 
 #static {
-  width: 75%;
-  top: 64%;
+  width: 80%;
+  top: 63%;
   left: 10%;
+  font-size: 0.75rem;
 }
 
 #action1 {
-  height: 4%;
-  width: 50%;
+  height: 5%;
+  width: 80%;
   top: 74%;
   left: 10%;
   display: flex;
@@ -150,37 +133,40 @@ main {
 }
 
 #tap {
-  height: 1em;
+  height: 0.75em;
 }
 
 #stats {
-  width: 15%;
+  width: 18%;
   height: 6%;
-  top: 89.5%;
-  right: 9%;
-  font-size: 150%;
+  top: 89%;
+  right: 7.25%;
+  font-size: 100%;
   font-weight: bolder;
   text-align: center;
+  justify-items: center;
 }
 
 #fineprint {
-  font-size: 0.75em;
-  top: 92%;
-  left: 8%;
+  font-size: 75%;
+  top: 91%;
+  left: 10%;
+  height: 6%;
+  width: 30%;
   display: flex;
-  flex-direction: column;
-}
-
-#year {
-  font-weight: bold;
-  font-size: 1.1em;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* ------- bio ------- */
 
 #bio {
-  width: 33%;
+  width: 100%;
   margin: 2rem;
+  box-shadow: 0px 0px 10px currentColor;
+  border-radius: 15px;
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 #bio p {
@@ -193,4 +179,110 @@ main {
   transform: scale(1.1);
   box-shadow: 0px 0px 10px currentColor;
   transition: all 0.25s ease-in-out;
+}
+
+#bio:hover {
+  box-shadow: unset;
+  transition: all 0.25s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  #card {
+    height: 33rem;
+    width: 24rem;
+    top: unset;
+  }
+
+  .card {
+    /* border: 1px solid deeppink; */
+  }
+
+  #name {
+    font-size: 1.5em;
+    top: 5.5%;
+    left: 9%;
+  }
+
+  #mana {
+    height: 5%;
+    width: 36%;
+    top: 5%;
+    right: 8%;
+  }
+
+  .mana {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .mana::before {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .manasymbols {
+    height: 1.5rem;
+    padding: 10% 0% 0% 5%;
+  }
+
+  #art {
+    height: 44%;
+    width: 83.5%;
+    top: 11.5%;
+  }
+
+  #type {
+    font-size: 1.25em;
+    top: 57%;
+    left: 9%;
+  }
+
+  #static {
+    width: 75%;
+    top: 64%;
+    left: 10%;
+    font-size: 1rem;
+  }
+
+  #action1 {
+    height: 4%;
+    width: 50%;
+    top: 74%;
+    left: 10%;
+  }
+
+  #tap {
+    height: 1em;
+  }
+
+  #stats {
+    width: 15%;
+    height: 6%;
+    top: 90%;
+    right: 9%;
+    font-size: 150%;
+  }
+
+  #fineprint {
+    font-size: 0.75em;
+    height: 5%;
+    width: 10%;
+    top: 92%;
+    left: 8%;
+    flex-direction: column;
+  }
+
+  #year {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  #bio {
+    width: 45%;
+    padding: 1rem;
+  }
 }
