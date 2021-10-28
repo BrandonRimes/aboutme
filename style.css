@@ -25,6 +25,7 @@ main {
   background-image: url("https://i.pinimg.com/originals/46/bf/4e/46bf4e33dcc634417b20037b57ee51e1.jpg");background-position: center;
   background-size: cover;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .card {
@@ -123,17 +124,29 @@ main {
   font-size: 0.75rem;
 }
 
-#action1 {
+#action1,
+#action2 {
   height: 5%;
   width: 80%;
-  top: 74%;
   left: 10%;
   display: flex;
   align-items: center;
 }
 
+#action1 {
+  top: 74%;
+}
+
+#action2 {
+  top: 80%;
+}
+
 #tap {
   height: 0.75em;
+}
+
+#untap {
+  height: 1em;
 }
 
 #stats {
